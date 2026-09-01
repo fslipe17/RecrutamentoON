@@ -31,17 +31,28 @@
             <h2>Cadestre seu Curriculo</h2>
             <p>Preencha o Formulário  para se candidatar à vaga</p>
             
-            <form action="#" maethod="get">
+            <!-- Preenchido o action e o method -->
+            <!-- A foto é um arquivo, obriga o enctype ser multipart -->
+            <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
                 <fieldset>
                 <legend>Dados Pessoias</legend>
+
+                <!-- Campo novo de foto -->
+                <div>
+                    <label for="foto-id">Foto: </label>
+                    <input id="foto-id" name="foto" type="file" accept="image/*">
+                </div>
+                
+                <!-- Adicionado Placeholder -->
                 <div>
                     <label for="nome_id">Nome Completo</label>
-                    <input id="nome_id" name="nome" type="text">
+                    <input id="nome_id" name="nome" type="text" placeholder="João da Silva" >
                 </div>
 
+                <!-- Adicionado required -->
                 <div>
                     <label for="telefone_id">Telefone</label>
-                    <input id="telefone_id" name="telefono" type="tel">
+                    <input id="telefone_id" name="telefono" type="tel" required>
                 </div>
 
                 <div>
